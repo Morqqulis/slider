@@ -1,0 +1,140 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* ---------------------------------------------- */
+:root {
+	--foreground: #d4d4d4;
+	--background: #060720;
+}
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	margin-inline: auto;
+	padding-inline: 15px;
+	width: 100%;
+	max-width: 1230px;
+	position: relative;
+}
+/* ---------------------------------------------- */
+
+.wrapper {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+}
+.sidebar {
+	max-width: 35%;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.sidebar-item {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	padding: 20px;
+
+	&:nth-child(1) {
+		background: linear-gradient(229.99deg, #11dee9 -26%, #017e8b 145%);
+	}
+	&:nth-child(2) {
+		background: linear-gradient(215.32deg, #fe3030 -1%, #d42425 124%);
+	}
+	&:nth-child(3) {
+		background: linear-gradient(221.87deg, #8308ea 1%, #5305af 128%);
+	}
+	&:nth-child(4) {
+		background: linear-gradient(220.16deg, #fbcf00 -8%, #e98701 138%);
+	}
+}
+
+h1,
+h2,
+h3 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.slider {
+	width: 65%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 35%;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.slider-item {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+
+	p {
+		font-size: 22px;
+	}
+	&:nth-child(1) {
+		background-image: url('../img/1.avif');
+	}
+	&:nth-child(2) {
+		background-image: url('../img/2.avif');
+	}
+	&:nth-child(3) {
+		background-image: url('../img/3.avif');
+	}
+	&:nth-child(4) {
+		background-image: url('../img/4.avif');
+	}
+}
+
+.slider-controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	transform: translate(-50px, -50%);
+	z-index: 100;
+}
+
+.slider-btn {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		border-color: cyan;
+		background-color: cyan;
+		color: #000;
+	}
+
+	&:nth-child(1) {
+		align-self: end;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	&:nth-child(2) {
+		align-self: start;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
